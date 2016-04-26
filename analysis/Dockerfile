@@ -7,8 +7,8 @@ MAINTAINER Gavin Chan <gavincyi at gmail dot com>
 USER jovyan
 
 # Environment
-export VISUAL=vim
-export EDITOR=$VISUAL
+ENV VISUAL vim
+ENV EDITOR ${VISUAL}
 
 # Git environment setup
 RUN git config --global user.email "gavincyi@gmail.com"
