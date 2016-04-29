@@ -28,6 +28,8 @@ RUN yum install -y zlib-devel
 RUN yum install -y which
 RUN yum install -y python-devel
 RUN yum install -y bzip2-devel-1.0.6-13.el7.x86_64
+RUN yum install -y vim
+RUN yum install -y cmake
 
 # Install POCO
 RUN cd /root/Downloads && \
@@ -57,7 +59,7 @@ RUN cd /root/Downloads && \
     tar xvf boost_1_60_0.tar  && \
     cd boost_1_60_0 && \
     ./bootstrap.sh && \
-    ./b2
+    ./b2 install
 
 # Git environment setup
 RUN git config --global user.email "gavincyi@gmail.com"
